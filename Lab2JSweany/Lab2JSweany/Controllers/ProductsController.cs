@@ -8,6 +8,16 @@ namespace Lab2JSweany.Controllers
 {
     public class ProductsController : Controller
     {
+        //Copied from HomeController as example:
+        public ActionResult About()
+        {
+            ViewBag.Message = "Your application description page.";
+
+            return View();
+        }
+
+
+
         // GET: Products
         public string Index()
         {
