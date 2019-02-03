@@ -8,40 +8,47 @@ namespace Lab2JSweany.Controllers
 {
     public class ProductsController : Controller
     {
-        //Copied from HomeController as example:
-        public ActionResult About()
+        // GET: Products
+        public ActionResult Index()
         {
-            ViewBag.Message = "Your application description page.";
-
+            ViewBag.Message = "Products/Index is displayed";
             return View();
         }
 
-
-
-        // GET: Products
-        public string Index()
-        {
-            return "Products/Index is displayed";
-        }
+        // Older code for GET: Products
+        //public string Index()
+        //{
+        //    return "Products/Index is displayed";
+        //}
 
         // GET: Products/Browse
+        public ActionResult Browse()
+        {
+            ViewBag.Message = "Browse displayed";
+            return View();
+        }
+
+        /* Older code for GET: Products/Browse
         public string Browse()
         {
             return "Browse displayed";
         }
+       */
 
         // GET: Products/Details/105
-        public string Details(int id)
+        public ActionResult Details(int id)
         {
-            string message = "Details displayed for Id=" + id;
-            return message;
+            ViewBag.Message = "Details displayed for Id=" + id;
+            return View();
+        }
+        
+        // GET: Products/Location?zip=44124
+        public ActionResult Location(string zip)
+        {
+            ViewBag.Message = "Location displayed for zip=" + zip;
+            return View();
         }
 
-        // GET: Products/Location?zip=44124
-        public string Location(string zip)
-        {
-            string message = "Location displayed for zip=" + zip;
-            return message;
-        }
+     
     }
 }
