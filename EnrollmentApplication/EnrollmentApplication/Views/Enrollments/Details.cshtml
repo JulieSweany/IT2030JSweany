@@ -11,14 +11,6 @@
     <hr />
     <dl class="dl-horizontal">
         <dt>
-            @Html.DisplayNameFor(model => model.Course.CourseTitle)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Course.CourseTitle)
-        </dd>
-
-        <dt>
             @Html.DisplayNameFor(model => model.Student.LastName)
         </dt>
 
@@ -27,11 +19,54 @@
         </dd>
 
         <dt>
+            @Html.DisplayNameFor(model => model.Course.CourseTitle)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Course.CourseTitle)
+        </dd>
+
+        <dt>
             @Html.DisplayNameFor(model => model.Grade)
         </dt>
 
         <dd>
             @Html.DisplayFor(model => model.Grade)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IsActive)
+        </dt>
+
+        <dd>
+            @Html.CheckBoxFor(model => model.IsActive)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AssignedCampus)
+
+        </dt>
+
+        <dd>
+            @Html.TextBoxFor(model => model.AssignedCampus)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EnrollmentSemester)
+
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EnrollmentSemester)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EnrollmentYear)
+
+        </dt>
+
+        <dd>
+            @Html.TextBoxFor(model => model.EnrollmentYear)
         </dd>
 
     </dl>

@@ -39,8 +39,8 @@ namespace EnrollmentApplication.Controllers
         // GET: Enrollments/Create
         public ActionResult Create()
         {
-           // ViewBag.CourseId = new SelectList(db.Courses, "CourseId", "CourseTitle");
-           // ViewBag.StudentId = new SelectList(db.Students, "StudentId", "LastName");
+           ViewBag.CourseId = new SelectList(db.Courses, "CourseId", "CourseTitle");
+            ViewBag.StudentId = new SelectList(db.Students, "StudentId", "LastName");
             return View();
         }
 
@@ -49,7 +49,7 @@ namespace EnrollmentApplication.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "EnrollmentId,StudentId,CourseId,Grade")] Enrollment enrollment)
+        public ActionResult Create([Bind(Include = "EnrollmentId,StudentId,LastName,CourseId,Grade,IsActive,AssignedCampus,EnrollmentSemester,EnrollmentYear")] Enrollment enrollment)
         {
             if (ModelState.IsValid)
             {
