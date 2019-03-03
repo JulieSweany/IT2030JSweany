@@ -31,9 +31,12 @@ namespace EnrollmentApplication.Models
         [Display(Name = "Enrolled in Semester")]
         public virtual string EnrollmentSemester { get; set; }
 
-        [Required(ErrorMessage = "The {0} is required")]
+        [Required(ErrorMessage = "The {0} is required")] 
         [Range(2018,Double.PositiveInfinity, ErrorMessage = "Years before 2018 are not allowed")]
         [Display(Name = "Enrollment Year")]
         public virtual int EnrollmentYear { get; set; }
+
+        [InvalidChars("x!7@")]
+        public virtual string Notes { get; set; }
     }
 }

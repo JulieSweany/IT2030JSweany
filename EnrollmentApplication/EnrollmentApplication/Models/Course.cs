@@ -23,5 +23,9 @@ namespace EnrollmentApplication.Models
         [Range(1,4, ErrorMessage = "Please enter a number from 1 through 4")]
         [Display(Name = "Number of Credits")]
         public virtual int Credits { get; set; }
+
+        [Display(Name = "Instructor Name")]
+        public virtual string InstructorName { get; set; }
+
     }
 }
