@@ -14,6 +14,22 @@ namespace EnrollmentApplication.Controllers
     {
         private EnrollmentDB db = new EnrollmentDB();
 
+        //Methods for Ajax Student of the Month feature
+        public ActionResult StudentOfTheMonth()
+        {
+            var student = GetStudentOfTheMonth();
+            return PartialView("_StudentOfTheMonth", student);
+        }
+
+        private Student GetStudentOfTheMonth()
+        {
+            var student = db.Students
+                .OrderBy(a => System.Guid.NewGuid())
+                .First();
+
+            return student;
+        }
+
         // GET: Students
         public ActionResult Index()
         {
