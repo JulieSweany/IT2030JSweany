@@ -15,12 +15,17 @@ namespace MvcMusicStore
         protected void Application_Start()
         {
             //Changing to code first migrations
-            //Database.SetInitializer(new MusicStoreDbInitializer());
+            NewData();
 
             AreaRegistration.RegisterAllAreas();
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
+        }
+
+        private static void NewData()
+        {
+            Database.SetInitializer(new MusicStoreDbInitializer());
         }
     }
 }
