@@ -2,7 +2,7 @@
 
 @{
     ViewBag.Title = "Details";
-    Layout = "~/Views/Shared/_StoreSharedLayout.cshtml";
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
 <h2>Details</h2>
@@ -17,4 +17,7 @@
     <em>Price: </em>  @Html.DisplayFor(model => model.Price)
 </p>
 
-<button class="btn-sm">@Html.ActionLink("Add to Cart", "/ShoppingCart/AddToCart/", new { id = Model.AlbumId })</button>
+@Html.ActionLink("Add to cart", "AddToCart",
+       "ShoppingCart",
+       new { id = Model.AlbumId },
+       new { @class = "btn btn-primary"})

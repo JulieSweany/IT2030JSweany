@@ -14,6 +14,25 @@ namespace MVCMusicStoreApplication.Controllers
     {
         private MVCMusicStoreDB db = new MVCMusicStoreDB();
 
+        public ActionResult DailyDeal()
+        {
+            var album = GetDailyDeal();
+            return PartialView("_DailyDeal", album);
+        }
+
+        //Select an album and discount it by 50%
+        private object GetDailyDeal()
+        {
+            //random album
+            var album = db.Albums
+                 .OrderBy(a => System.Guid.NewGuid())
+                 .First();
+
+            //reduce price
+            album.Price *= 0.5m;
+            return album;
+        }
+
         // GET: StoreManager
         public ActionResult Index()
         {
