@@ -35,9 +35,18 @@ namespace EventApplication.Controllers
             return View(@event);
         }
 
+
+        // GET: StoreManager/Create
+        //public ActionResult Create()
+        //{
+        //    ViewBag.ArtistId = new SelectList(db.Artists, "ArtistId", "Name");
+        //    ViewBag.GenreId = new SelectList(db.Genres, "GenreId", "Name");
+        //    return View();
+        //}
         // GET: Events/Create
         public ActionResult Create()
         {
+            ViewBag.EventTypeId = new SelectList(db.EventTypes, "EventTypeId", "Name");
             return View();
         }
 
@@ -46,7 +55,7 @@ namespace EventApplication.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "EventId,EventTypeId,Title,Description,StartDateTime,EndDateTime,Organizer,ContactInfo,City,State,MaxTickets,TicketsAvailable")] Event @event)
+        public ActionResult Create([Bind(Include = "EventId,EventTypeId,Title,Description,StartDate,EndDate,StartTime,EndTime,Organizer,ContactInfo,City,State,MaxTickets,TicketsAvailable")] Event @event)
         {
             if (ModelState.IsValid)
             {
@@ -78,7 +87,7 @@ namespace EventApplication.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "EventId,EventTypeId,Title,Description,StartDateTime,EndDateTime,Organizer,ContactInfo,City,State,MaxTickets,TicketsAvailable")] Event @event)
+        public ActionResult Edit([Bind(Include = "EventId,EventTypeId,Title,Description,StartDate,EndDate,StartTime,EndTime,Organizer,ContactInfo,City,State,MaxTickets,TicketsAvailable")] Event @event)
         {
             if (ModelState.IsValid)
             {
