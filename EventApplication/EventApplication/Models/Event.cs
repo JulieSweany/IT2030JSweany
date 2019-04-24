@@ -18,16 +18,20 @@ namespace EventApplication.Models
         public virtual string Description { get; set; }
 
         [Display(Name = "Start Date")]
-        public virtual string StartDate { get; set; }
+        [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:MM/dd/yyyy}")]
+        public virtual DateTime StartDate { get; set; }
 
         [Display(Name = "Start Time")]
-        public virtual string StartTime { get; set; }
+        [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:h:mm}")]
+        public virtual DateTime StartTime { get; set; }
 
         [Display(Name = "End Date")]
-        public virtual string EndDate { get; set; }
+        [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:MM/dd/yyyy}")]
+        public virtual DateTime EndDate { get; set; }
 
         [Display(Name = "End Time")]
-        public virtual string EndTime { get; set; }
+        [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:h:mm}")]
+        public virtual DateTime EndTime { get; set; }
 
         public virtual string Organizer { get; set; }
 
@@ -42,5 +46,8 @@ namespace EventApplication.Models
 
         [Display(Name = "Available Tickets")]
         public virtual int TicketsAvailable { get; set; }
+
+        [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:MM/dd/yyyy}")]
+        public virtual DateTime TestDate { get; set; }
     }
 }

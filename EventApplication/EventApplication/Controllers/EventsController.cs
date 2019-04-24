@@ -55,7 +55,7 @@ namespace EventApplication.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "EventId,EventTypeId,Title,Description,StartDate,EndDate,StartTime,EndTime,Organizer,ContactInfo,City,State,MaxTickets,TicketsAvailable")] Event @event)
+        public ActionResult Create([Bind(Include = "EventId,EventTypeId,Title,Description,StartDate,EndDate,StartTime,EndTime,Organizer,ContactInfo,City,State,MaxTickets,TicketsAvailable,TestDate")] Event @event)
         {
             if (ModelState.IsValid)
             {
