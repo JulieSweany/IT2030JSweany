@@ -10,7 +10,7 @@ namespace EnrollmentApplication.Models
     {
         readonly int minimumAge;
 
-        public MinimumAgeAttribute(int mimimumAge)
+        public MinimumAgeAttribute(int minimumAge)
         {
             this.minimumAge = minimumAge;
         }

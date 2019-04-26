@@ -6,7 +6,7 @@ using System.Web;
 
 namespace EventApplication.Models
 {
-    public class EventApplicationDBContext : DbContext
+    public class EventApplicationDB : DbContext
     {
         // You can add custom code to this file. Changes will not be overwritten.
         // 
@@ -15,12 +15,12 @@ namespace EventApplication.Models
         // For more information refer to the documentation:
         // http://msdn.microsoft.com/en-us/data/jj591621.aspx
     
-        public EventApplicationDBContext() : base("name=EventApplicationDBContext")
+        public EventApplicationDB() : base("name=EventApplicationDB")
         {
         }
 
-        public DbSet<EventApplication.Models.Event> Events { get; set; }
-        public DbSet<EventApplication.Models.EventType> EventTypes { get; set; }
+        public System.Data.Entity.DbSet<EventApplication.Models.Event> Events { get; set; }
 
+        public System.Data.Entity.DbSet<EventApplication.Models.EventType> EventTypes { get; set; }
     }
 }
