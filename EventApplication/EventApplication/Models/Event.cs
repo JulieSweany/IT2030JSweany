@@ -25,13 +25,13 @@ namespace EventApplication.Models
         [Required(ErrorMessage = "The {0} is required")]
         [DataType(DataType.Time)]
         [Display(Name = "Start Time")]
-        [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:h:mm}")]
+        [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:h:mm tt}")]
         public virtual DateTime StartTime { get; set; }
 
         [Required(ErrorMessage = "The {0} is required")]
         [DataType(DataType.Time)]
         [Display(Name = "End Time")]
-        [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:h:mm}")]
+        [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:h:mm tt}")]
         public virtual DateTime EndTime { get; set; }
 
         [Display(Name = "Organizer Name")]

@@ -72,6 +72,7 @@ namespace EventApplication.Controllers
             {
                 return HttpNotFound();
             }
+            ViewBag.EventTypeId = new SelectList(db.EventTypes, "EventTypeId", "Name");
             return View(@event);
         }
 
@@ -88,6 +89,7 @@ namespace EventApplication.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
+            ViewBag.EventTypeId = new SelectList(db.EventTypes, "EventTypeId", "Name");
             return View(@event);
         }
 

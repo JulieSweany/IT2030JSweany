@@ -67,10 +67,10 @@
             @Html.DisplayFor(modelItem => item.EndDate)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.StartTime)
+            @Html.DisplayFor(modelItem => item.StartTime, "{0:hh:mm tt}")
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.EndTime)
+            @Html.DisplayFor(modelItem => item.EndTime, "{0:hh:mm tt}")
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.Organizer)
