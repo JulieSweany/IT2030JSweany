@@ -17,6 +17,7 @@ namespace EventApplication.Controllers
         // GET: Events
         public ActionResult Index()
         {
+            var events = db.Events.Include(e => e.EventType);
             return View(db.Events.ToList());
         }
 
@@ -55,7 +56,7 @@ namespace EventApplication.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-
+            ViewBag.EventTypeId = new SelectList(db.EventTypes, "EventTypeId", "Name");
             return View(@event);
         }
 

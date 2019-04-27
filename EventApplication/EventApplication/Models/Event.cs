@@ -14,6 +14,7 @@ namespace EventApplication.Models
         public virtual string Description { get; set; }
 
         [Display(Name = "Start Date")]
+        [DateInFuture()]
         [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:MM/dd/yyyy}")]
         public virtual DateTime StartDate { get; set; }
 
@@ -44,9 +45,11 @@ namespace EventApplication.Models
         public virtual string State { get; set; }
 
         [Display(Name = "Max Tickets")]
+        [Range(1, Double.PositiveInfinity, ErrorMessage = "The quantity for {0} must be at least 1")]
         public virtual int MaxTickets { get; set; }
 
         [Display(Name = "Available Tickets")]
+        [Range(1,Double.PositiveInfinity, ErrorMessage = "The quantity for {0} must be at least 1")]
         public virtual int TicketsAvailable { get; set; }
 
         public virtual EventType EventType { get; set; }
