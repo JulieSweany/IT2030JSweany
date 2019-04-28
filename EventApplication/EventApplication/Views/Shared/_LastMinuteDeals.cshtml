@@ -3,7 +3,6 @@
 <div class="panel panel-primary">
     <div class="panel-heading">
         <h2 class="panel-title">Last Minute Deals</h2>
-        <h2 class="panel-title">Last Minute Deals</h2>
     </div>
 
     <div id="lastminutedeals" class="panel-body">
@@ -28,21 +27,16 @@
             {
                 <tr>
                     <td>
-                        @item.Title)
+                        @Html.ActionLink(item.Title, "Details", new { id = item.EventId }) 
                     </td>
                     <td>
-                        @item.StartDate)
+                        @item.StartDate
                     </td>
                     <td>
-                        @item.City)
+                        @item.City
                     </td>
                     <td>
-                        @item.State)
-                    </td>
-                    <td>
-                        @Html.ActionLink("Edit", "Edit", new { id = item.EventId }) |
-                        @Html.ActionLink("Details", "Details", new { id = item.EventId }) |
-                        @Html.ActionLink("Delete", "Delete", new { id = item.EventId })
+                        @item.State
                     </td>
                 </tr>
             }

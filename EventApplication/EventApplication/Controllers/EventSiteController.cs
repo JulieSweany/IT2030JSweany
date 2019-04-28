@@ -12,7 +12,8 @@ namespace EventApplication.Controllers
     public class EventSiteController : Controller
     {
         private EventApplicationDB db = new EventApplicationDB();
-
+        //Moved Last Minute Deals methods to home controller--may not need this controller now?
+        /*
         public ActionResult LastMinuteDeals()
         {
             var dealEvents = GetDeals();
@@ -28,13 +29,6 @@ namespace EventApplication.Controllers
             var datePlusTwo = dateCurrent.AddDays(2);
 
             return db.Events.Where(a => a.StartDate <= datePlusTwo && a.StartDate >= dateCurrent).ToList();
-
-            //this worked, but returned dates in the past, too
-            //return db.Events.Where(a => (a.StartDate) <= datePlusOne).ToList();
-
-
-      
-
         }
 
         // GET: EventSite
@@ -43,5 +37,6 @@ namespace EventApplication.Controllers
             var events = db.Events.Include(e => e.EventType);
             return View(db.Events.ToList());
         }
+        */
     }
 }

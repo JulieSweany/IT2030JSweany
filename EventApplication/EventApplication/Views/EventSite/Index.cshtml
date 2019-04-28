@@ -1,7 +1,7 @@
 ﻿@model IEnumerable<EventApplication.Models.Event>
 
 @{
-    ViewBag.Title = "Home";
+    ViewBag.Title = "Event Site Home";
 }
 
 <div class="jumbotron">
@@ -21,7 +21,7 @@
     </div>
 
     <div class="col-md-6">
-        @using (Ajax.BeginForm("LastMinuteDeals", "Home",
+        @using (Ajax.BeginForm("LastMinuteDeals", "EventSite",
         new AjaxOptions
         {
             InsertionMode = InsertionMode.Replace,
@@ -40,8 +40,3 @@
 
     </div>
 </div>
-
-@section Scripts {
-
-    <script src="~/Scripts/jquery.unobtrusive-ajax.js"></script>
-}

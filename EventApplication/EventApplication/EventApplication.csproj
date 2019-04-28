@@ -261,7 +261,9 @@
     <Content Include="Views\EventTypes\Details.cshtml" />
     <Content Include="Views\EventTypes\Edit.cshtml" />
     <Content Include="Views\EventTypes\Index.cshtml" />
-    <Content Include="Views\EventSite\_LastMinuteDeals.cshtml" />
+    <Content Include="Views\Shared\_LastMinuteDeals.cshtml" />
+    <Content Include="Views\EventSite\Index.cshtml" />
+    <Content Include="Views\Home\Details.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
