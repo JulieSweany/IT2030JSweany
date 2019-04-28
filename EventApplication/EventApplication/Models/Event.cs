@@ -14,11 +14,12 @@ namespace EventApplication.Models
         public virtual string Description { get; set; }
 
         [Display(Name = "Start Date")]
-        [DateInFuture()]
+        //[DateInFuture()]
         [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:MM/dd/yyyy}")]
         public virtual DateTime StartDate { get; set; }
 
         [Display(Name = "End Date")]
+        //[DateInFuture()]
         [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:MM/dd/yyyy}")]
         public virtual DateTime EndDate { get; set; }
 

@@ -18,7 +18,9 @@ namespace EventApplication.Controllers
         public ActionResult Index()
         {
             var events = db.Events.Include(e => e.EventType);
-            return View(db.Events.ToList());
+            //return View(db.Events.ToList());
+            var dateCurrent = DateTime.Now.Date;
+            return View(db.Events.Where(a => a.StartDate >= dateCurrent).ToList());
         }
 
         // GET: Events/Details/5
