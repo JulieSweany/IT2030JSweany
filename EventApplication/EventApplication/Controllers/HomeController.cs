@@ -1,11 +1,10 @@
 ﻿using EventApplication.Models;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Mvc;
 using System.Data.Entity;
+using System.Linq;
 using System.Net;
+using System.Web.Mvc;
 
 namespace EventApplication.Controllers
 {
@@ -33,6 +32,33 @@ namespace EventApplication.Controllers
             //return db.Events.Where(a => (a.StartDate) <= datePlusOne).ToList();
         }
 
+        //(This worked as event and event type search (location search)
+        public ActionResult EventSearch(string q)
+        {
+            var eventresults = GetByEvent(q);
+            return PartialView("_EventSearchResultsHome", eventresults);
+        }
+
+        private List<Event> GetByEvent(string searchString)
+        {
+            var dateCurrent = DateTime.Now.Date;
+
+            List<Event> matchingEvents = new List<Event>();
+            List<Event> currentEvents = new List<Event>();
+
+            matchingEvents = db.Events
+                .Include(e => e.EventType)
+                .Where(e => e.Title.Contains(searchString) || e.EventType.Name.Contains(searchString))
+                .ToList();
+
+            currentEvents = matchingEvents
+                .Where(e => e.StartDate >= dateCurrent)
+                .ToList();
+
+            return currentEvents;
+        }
+
+       
 
         public ActionResult Index()
         {

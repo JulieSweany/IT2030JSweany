@@ -1,0 +1,52 @@
+﻿@model IEnumerable<EventApplication.Models.Event>
+
+    
+
+    <div id="eventsearchhome">
+        <div class="panel-heading">
+            <h2 class="panel-title">Search Results</h2>
+        </div>
+
+        <table class="table">
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Title)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.StartDate)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.City)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.State)
+                </th>
+                <th></th>
+            </tr>
+
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.ActionLink(item.Title, "Details", new { id = item.EventId })
+                    </td>
+                    <td>
+                        @item.StartDate
+                    </td>
+                    <td>
+                        @item.City
+                    </td>
+                    <td>
+                        @item.State
+                    </td>
+                </tr>
+            }
+        </table>
+
+    </div>
+
+@section Scripts
+    {
+    <script src="~/Scripts/Apps/EventSiteScripts.js"></script>
+    <script src="~/Scripts/jquery.unobtrusive-ajax.js"></script>
+}

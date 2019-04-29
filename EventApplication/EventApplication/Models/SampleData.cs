@@ -40,7 +40,7 @@ namespace EventApplication.Models
                 new Event { EventType = eventTypes.Single(e => e.Name == "Music"), Title = "Tuba Christmas 2014", Description = "Tubas bring Christmas cheer", Organizer = "University of Akron", ContactInfo = "TubaChristmas.com", City = "Akron", State = "OH", StartDate = DateTime.Parse("12/09/14"), EndDate = DateTime.Parse("12/09/14"), StartTime = DateTime.Parse("11:00:00"), EndTime = DateTime.Parse("01:00:00"), MaxTickets = 2000, TicketsAvailable = 2000 },
                 new Event { EventType = eventTypes.Single(e => e.Name == "Music"), Title = "Orchestra Concert", Description = "University of Akron's orchestra plays Mozart",
                     Organizer = "University of Akron", ContactInfo = "UofAOrchestra.net", City = "Akron", State = "OH",
-                    StartDate = DateTime.Parse("04/29/19"), EndDate = DateTime.Parse("04/29/19"),
+                    StartDate = DateTime.Parse("04/30/19"), EndDate = DateTime.Parse("04/30/19"),
                     StartTime = DateTime.Parse("11:00:00"), EndTime = DateTime.Parse("01:00:00"), MaxTickets = 2000, TicketsAvailable = 2000 },
                
                
