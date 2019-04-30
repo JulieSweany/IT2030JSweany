@@ -135,6 +135,12 @@ namespace EventApplication.Controllers
             return View(db.Events.ToList());
         }
 
+        public ActionResult FindAnEvent()
+        {
+            
+            return View();
+        }
+
         // GET: Events/Details/5
         public ActionResult Details(int? id)
         {

@@ -1,0 +1,36 @@
+﻿
+@{
+    ViewBag.Title = "Find an Event";
+}
+    <div>
+        @using (Ajax.BeginForm("EventOrLocation", "Home",
+        new AjaxOptions
+        {
+            InsertionMode = InsertionMode.Replace,
+            HttpMethod = "GET",
+            OnFailure = "homesearchfailed",
+            LoadingElementId = "ajax-loader",
+            UpdateTargetId = "eventsearchhome",
+        }))
+        {
+            <h2>Find an event near you!</h2>
+
+            <input type="text" name="q" placeholder="Event or Event Type" />
+            <input type="text" name="l" placeholder="Location: City or State" />
+
+            <input type="submit" class="btn btn-primary" value="Search" />
+
+
+            <image id="ajax-loader"
+                   src="@Url.Content("~/Images/ajax-loader.gif")"
+                   style="display:none" />
+
+            <div id="eventsearchhome">
+            </div>
+        }
+    </div>
+
+@section Scripts {
+    <script src="~/Scripts/Apps/EventSiteScripts.js"></script>
+    <script src="~/Scripts/jquery.unobtrusive-ajax.js"></script>
+}

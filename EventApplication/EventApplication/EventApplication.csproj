@@ -267,6 +267,7 @@
     <Content Include="Views\EventSite\Index.cshtml" />
     <Content Include="Views\Home\Details.cshtml" />
     <Content Include="Views\Shared\_EventSearchResultsHome.cshtml" />
+    <Content Include="Views\Home\FindAnEvent.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

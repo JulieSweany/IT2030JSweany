@@ -17,19 +17,13 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                @Html.ActionLink("Event Unlimited", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
                     <li>@Html.ActionLink("About", "About", "Home")</li>
                     <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
                     <li></li>
-                    <li>@Html.ActionLink("Find an Event", "Index", "Home")</li>
-
-                    <li>Find an Event</li>
-                    <li>Organize an Event</li>
-                    <li>Tickets Ordered</li>
                 </ul>
                 @Html.Partial("_LoginPartial")
             </div>
@@ -39,7 +33,7 @@
         @RenderBody()
         <hr />
         <footer>
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+            <p>&copy; @DateTime.Now.Year Event Unlimited</p>
         </footer>
     </div>
 
