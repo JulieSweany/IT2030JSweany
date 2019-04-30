@@ -28,12 +28,81 @@ namespace EventApplication.Controllers
 
             return db.Events.Where(a => a.StartDate <= datePlusTwo && a.StartDate >= dateCurrent).ToList();
 
-            //this worked, but returned dates in the past, too
-            //return db.Events.Where(a => (a.StartDate) <= datePlusOne).ToList();
         }
 
+        //Event/EventType/City/State searches -- Add combined search?
+
+        public ActionResult EventOrLocation(string q, string l)
+        {
+            if (q == "")//then search for location instead
+            {
+                var locationeventresults = GetByLocation(l);
+                return PartialView("_EventSearchResultsHome", locationeventresults);
+            }
+            
+            else if (l == "")
+            {
+                var eventeventresults = GetByEvent(q);
+                return PartialView("_EventSearchResultsHome", eventeventresults);
+            }
+
+            else if (q == "" && l == "")
+            {
+                var eventeventresults = GetByEvent(q);
+                return PartialView("_EventSearchResultsHome", eventeventresults);
+            }
+
+            else return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+        }
+        
+        private List<Event> GetByEvent(string searchString)
+        {
+            var dateCurrent = DateTime.Now.Date;
+
+            List<Event> matchingEvents = new List<Event>();
+            List<Event> currentEvents = new List<Event>();
+
+            matchingEvents = db.Events
+                .Include(e => e.EventType)
+                .Where(e => e.Title.Contains(searchString) || e.EventType.Name.Contains(searchString))
+                .ToList();
+
+            currentEvents = matchingEvents
+                .Where(e => e.StartDate >= dateCurrent)
+                .ToList();
+
+            return currentEvents;
+        }
+
+        public ActionResult LocationSearch(string l)
+        {
+                var eventresults = GetByLocation(l);
+                return PartialView("_EventSearchResultsHome", eventresults);
+        }
+
+        private List<Event> GetByLocation(string searchString)
+        {
+            var dateCurrent = DateTime.Now.Date;
+
+            List<Event> matchingLocationEvents = new List<Event>();
+            List<Event> currentLocationEvents = new List<Event>();
+
+            matchingLocationEvents = db.Events
+                .Include(e => e.EventType)
+                .Where(e => e.City.Contains(searchString) || e.State.Contains(searchString))
+                .ToList();
+
+            currentLocationEvents = matchingLocationEvents
+                .Where(e => e.StartDate >= dateCurrent)
+                .ToList();
+
+            return currentLocationEvents;
+        }
+
+
+        //Copied this in case adding location search doesn't go well
         //(This worked as event and event type search (location search)
-        public ActionResult EventSearch(string q)
+        /*public ActionResult EventSearch(string q)
         {
             var eventresults = GetByEvent(q);
             return PartialView("_EventSearchResultsHome", eventresults);
@@ -57,8 +126,8 @@ namespace EventApplication.Controllers
 
             return currentEvents;
         }
+        */
 
-       
 
         public ActionResult Index()
         {

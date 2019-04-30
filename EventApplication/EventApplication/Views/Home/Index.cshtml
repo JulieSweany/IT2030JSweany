@@ -11,7 +11,7 @@
 
 <div class="row">
     <div class="col-md-6">
-        @using (Ajax.BeginForm("EventSearch", "Home",
+        @using (Ajax.BeginForm("EventOrLocation", "Home",
         new AjaxOptions
         {
             InsertionMode = InsertionMode.Replace,
@@ -24,7 +24,7 @@
             <h2>Find an Event</h2>
 
             <input type="text" name="q" placeholder="Event or Event Type" />
-            <input type="text" name="q" placeholder="Location: City or State" />
+            <input type="text" name="l" placeholder="Location: City or State" />
 
             <input type="submit" class="btn btn-primary" value="Search" />
 
