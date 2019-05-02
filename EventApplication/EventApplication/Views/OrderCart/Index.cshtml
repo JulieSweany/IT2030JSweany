@@ -1,0 +1,23 @@
+﻿@model EventApplication.Models.OrderCartViewModel
+@{
+    ViewBag.Title = "Order Cart";
+}
+
+<h2>Here is your order cart</h2>
+<div>
+    <table>
+        <tr>
+            <th> Title </th>
+            <th> Quantity </th >
+        </tr>
+
+        @foreach (var item in Model.CartItems)
+        {
+            <tr>
+                <td> @item.EventSelected.Title </td>
+                <td> @item.Count </td>
+                <td><a href="#">Cancel Order</a></td>
+            </tr>
+        }
+    </table>
+</div>

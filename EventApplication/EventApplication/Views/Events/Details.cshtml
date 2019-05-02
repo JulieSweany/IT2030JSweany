@@ -116,7 +116,8 @@
 
     </dl>
 </div>
-<p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.EventId }) |
-    @Html.ActionLink("Back to List", "Index")
-</p>
+
+
+@Html.ActionLink("Register", "AddToCart", "OrderCart", new { id = Model.EventId }, new { @class = "btn btn-primary" })
+
+@Html.ActionLink("Return Home", "Index", "Home", new { @class = "btn btn-primary" })
