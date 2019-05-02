@@ -7,8 +7,6 @@ namespace EventApplication.Models
 {
     public class OrderSummaryViewModel
     {
-        public DateTime EndDate;
-        public string EventName;
-        public int Quantity;
+        public List<Order> OrderItems;
     }
 }

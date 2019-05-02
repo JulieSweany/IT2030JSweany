@@ -1,6 +1,6 @@
-﻿@model EventApplication.Models.OrderCartViewModel
+﻿@model EventApplication.Models.OrderSummaryViewModel
 @{
-    ViewBag.Title = "Order Cart";
+    ViewBag.Title = "Order Summary (Index)";
 }
 
 <h2>Here is your order cart</h2>
@@ -8,14 +8,13 @@
     <table>
         <tr>
             <th> Title </th>
-            <th> Quantity </th >
+            <th> Quantity </th>
         </tr>
 
-        @foreach (var item in Model.CartItems)
+        @foreach (var item in Model.OrderItems)
         {
             <tr>
                 <td> @item.EventSelected.Title </td>
-                <td> @item.Count </td>
                 <td><a href="#">Cancel Order</a></td>
             </tr>
         }

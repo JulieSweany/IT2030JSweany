@@ -6,12 +6,12 @@ using System.Web;
 
 namespace EventApplication.Models
 {
-    public class Cart
+    public class Order
     {
         [Key]
         public int RecordId { get; set; }
 
-        public string CartId { get; set; }
+        public string OrderId { get; set; }
 
         public int EventId { get; set; }
 

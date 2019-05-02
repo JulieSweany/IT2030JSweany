@@ -179,7 +179,7 @@
     <Compile Include="Controllers\EventTypesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
-    <Compile Include="Controllers\OrderCartController.cs" />
+    <Compile Include="Controllers\OrderController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -190,9 +190,8 @@
     <Compile Include="Models\EventType.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
-    <Compile Include="Models\Cart.cs" />
-    <Compile Include="Models\OrderCart.cs" />
-    <Compile Include="Models\OrderCartViewModel.cs" />
+    <Compile Include="Models\Order.cs" />
+    <Compile Include="Models\OrderSummary.cs" />
     <Compile Include="Models\OrderSummaryViewModel.cs" />
     <Compile Include="Models\SampleData.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -273,9 +272,8 @@
     <Content Include="Views\Home\Details.cshtml" />
     <Content Include="Views\Shared\_EventSearchResultsHome.cshtml" />
     <Content Include="Views\Home\FindAnEvent.cshtml" />
-    <Content Include="Views\OrderCart\Index.cshtml" />
-    <Content Include="Views\OrderCart\AddToCartTest.cshtml" />
-    <Content Include="Views\OrderCart\Register.cshtml" />
+    <Content Include="Views\Order\Index.cshtml" />
+    <Content Include="Views\Order\Register.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
