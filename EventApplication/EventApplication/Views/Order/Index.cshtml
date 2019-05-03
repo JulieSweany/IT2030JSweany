@@ -7,16 +7,31 @@
 <div>
     <table>
         <tr>
-            <th> Title </th>
-            <th> Quantity </th>
+            <th> Count </th>
+            <th> DateCreated </th>
+            <th> EventId </th>
+            <th> EventSelected </th>
+            <th> OrderId </th>
+            <th> OrderNumber </th>
+            <th> RecordId </th>
+            <th> UserId </th>
         </tr>
 
         @foreach (var item in Model.OrderItems)
         {
-            <tr>
-                <td> @item.EventSelected.Title </td>
-                <td><a href="#">Cancel Order</a></td>
-            </tr>
+        <tr>
+            <td> @item.Count </td>
+            <td> @item.DateCreated </td>
+            <td> @item.EventId </td>
+            <td> @item.EventSelected.Title </td>
+            <td> @item.OrderId </td>
+            <td> @item.OrderNumber </td>
+            <td> @item.RecordId </td>
+            <td> @item.UserId </td>
+
+            <td><a href="#">Cancel Order</a></td>
+        </tr>
         }
     </table>
+
 </div>

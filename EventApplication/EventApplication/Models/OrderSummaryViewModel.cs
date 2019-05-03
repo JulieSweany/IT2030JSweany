@@ -8,5 +8,6 @@ namespace EventApplication.Models
     public class OrderSummaryViewModel
     {
         public List<Order> OrderItems;
+
     }
 }

@@ -274,6 +274,7 @@
     <Content Include="Views\Home\FindAnEvent.cshtml" />
     <Content Include="Views\Order\Index.cshtml" />
     <Content Include="Views\Order\Register.cshtml" />
+    <Content Include="Views\Order\OrderSummary.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -13,7 +13,7 @@ namespace EventApplication.Models
 
         public string UserId { get; set; }
 
-        //public string OrderId { get; set; }
+        public string OrderId { get; set; }
 
         public int EventId { get; set; }
 

@@ -32,6 +32,7 @@ namespace EventApplication.Controllers
         {
             OrderSummary order = OrderSummary.GetOrder(this.HttpContext);
             order.AddOrder(id);
+            //return RedirectToAction("OrderSummary");    --- will need this after authentication implemented
             return RedirectToAction("Index");
         }
 
