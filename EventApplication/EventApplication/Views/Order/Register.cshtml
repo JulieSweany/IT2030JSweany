@@ -6,6 +6,21 @@
 
 <h2>Register</h2>
 
-<p>
-    Sale end on @Html.DisplayFor(model => model.EndDate)
-</p>
+
+<div>
+    @foreach (var item in Model.OrderItems)
+    {
+        <p> Sale ends on @item.EventSelected.StartDate </p>
+
+        <table>
+            <tr>
+                <td> @item.EventSelected.Title </td>
+                <td> Number of Tickets  </td>
+            </tr>
+            <tr>
+                <td> FREE </td>
+                <td><@Html.EditorFor(model => item.Count)></td>
+            </tr>
+        </table>
+    }
+</div>

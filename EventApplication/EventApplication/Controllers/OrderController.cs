@@ -25,6 +25,7 @@ namespace EventApplication.Controllers
             return View(vm);
         }
 
+        
         //Register for event in controller
         // GET: Order/AddOrder
         public ActionResult AddOrder(int id)
