@@ -14,16 +14,6 @@ namespace EventApplication.Models
         
         public string UserId;
 
-        //I don't think this will work now that there is a user id; changing below
-        /*
-         * public static OrderSummary GetOrder(HttpContextBase context)
-        {
-            OrderSummary order = new OrderSummary();
-            order.UserId = order.GetOrderId(context);
-            return order;
-        }
-        */
-
         public static OrderSummary GetOrder(HttpContextBase context)
         {
             OrderSummary order = new OrderSummary();
@@ -32,12 +22,9 @@ namespace EventApplication.Models
             userId = context.User.Identity.Name;
             order.UserId = userId;
             
-            //order.UserId = order.GetOrderId(context); --I don't think this worked
             return order;
         }
        
-      
-
         public List<Order> GetOrderItems()
         {
             return db.Orders.Where(o => o.UserId == this.UserId).ToList();
@@ -70,9 +57,6 @@ namespace EventApplication.Models
             }
             db.SaveChanges();
         }
-
-        
-        
     }
 
 }

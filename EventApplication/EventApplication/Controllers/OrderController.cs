@@ -11,7 +11,7 @@ namespace EventApplication.Controllers
     {
         EventApplicationDB db = new EventApplicationDB();
 
-        // GET: OrderCart
+        // GET: OrderSummaryCart
         public ActionResult Index()
         {
             OrderSummary thesummary = new OrderSummary();
@@ -21,12 +21,12 @@ namespace EventApplication.Controllers
             {
                 OrderItems = thesummary.GetOrderItems()
             };
-        
+
             return View(vm);
         }
 
-        
-        // GET: Order/AddOrder
+
+        // GET: Order/AddOrder ---ORIGINAL--Will need one that take in int for Count, too
         public ActionResult AddOrder(int id)
         {
             OrderSummary order = OrderSummary.GetOrder(this.HttpContext);
@@ -34,31 +34,5 @@ namespace EventApplication.Controllers
             //return RedirectToAction("OrderSummary");
             return RedirectToAction("Index");
         }
-
-        //GET Register
-        //need to get count
-        public ActionResult Register(int id)
-        {
-            OrderSummary order = OrderSummary.GetOrder(this.HttpContext);
-            order.AddOrder(id);
-
-           //OrderSummary thesummary = new OrderSummary();
-           //thesummary = OrderSummary.GetOrder(this.HttpContext);
-
-            /*
-             * OrderSummaryViewModel vm = new OrderSummaryViewModel()
-            {
-                OrderItems = order.GetOrderItems()
-            };
-            */
-            //just added "SingleOrderViewModel.cs" still needs info in that class, too
-            return View();
-        }
-        // POST: OrderCart/RemoveOrder
-        [HttpPost]
-        public ActionResult RemoveOrder()
-        {
-            throw new NotImplementedException();
-        }
-    }
+    }    
 }
