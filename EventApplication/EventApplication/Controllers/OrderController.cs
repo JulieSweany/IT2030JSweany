@@ -27,6 +27,19 @@ namespace EventApplication.Controllers
 
         public ActionResult Register (int id)
         {
+            OrderSummary order = OrderSummary.GetOrder(this.HttpContext);
+            order.AddOrder(id);
+
+            /*
+            OrderSummary thesummary = new OrderSummary();
+            thesummary = OrderSummary.GetOrder(this.HttpContext);
+            OrderSummaryViewModel vm = new OrderSummaryViewModel()
+            {
+                OrderItems = thesummary.GetOrderItems()
+            };
+            */
+
+
             return View();
         }
 

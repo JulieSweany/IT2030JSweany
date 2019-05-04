@@ -274,7 +274,7 @@
     <Content Include="Views\Shared\_EventSearchResultsHome.cshtml" />
     <Content Include="Views\Home\FindAnEvent.cshtml" />
     <Content Include="Views\Order\Index.cshtml" />
-    <Content Include="Views\Order\Register.cshtml" />
+    <Content Include="Views\Home\Register.cshtml" />
     <Content Include="Views\Order\OrderSummary.cshtml" />
   </ItemGroup>
   <ItemGroup>

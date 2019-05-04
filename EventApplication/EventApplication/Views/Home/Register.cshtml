@@ -1,0 +1,38 @@
+﻿@model EventApplication.Models.Event
+
+@{
+    ViewBag.Title = "Register";
+}
+
+<h2>Register</h2>
+<p>Sale ends on @Html.DisplayFor(model => model.StartDate)</p>
+
+@using (Html.BeginForm())
+{
+
+
+    <div class="row">
+        <div class="col-md-6">
+            <p>  @Html.DisplayFor(model => model.Title)</p>
+            <p>FREE</p>
+        </div>
+        <div class="col-md-6">
+            <p>Number of Tickets</p>
+            <input type="text" name="numberOfTickets">
+        </div>
+    </div>
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

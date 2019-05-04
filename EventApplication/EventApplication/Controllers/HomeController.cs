@@ -13,6 +13,43 @@ namespace EventApplication.Controllers
         private EventApplicationDB db = new EventApplicationDB();
 
        
+        public ActionResult Register(int? id)
+        {
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            Event @event = db.Events.Find(id);
+            if (@event == null)
+            {
+                return HttpNotFound();
+            }
+            return View(@event);
+        }
+
+        //Used this to help with writing Register action
+        // GET: Events/Details/5
+        /*
+        public ActionResult Details(int? id)
+        {
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            Event @event = db.Events.Find(id);
+            if (@event == null)
+            {
+                return HttpNotFound();
+            }
+            return View(@event);
+        }
+        */
+
+
+
+
+
+
 
         public ActionResult LastMinuteDeals()
         {
