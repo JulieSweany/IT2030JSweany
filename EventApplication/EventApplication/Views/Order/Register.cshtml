@@ -1,4 +1,4 @@
-﻿@model EventApplication.Models.OrderSummaryViewModel
+﻿@model EventApplication.Models.Order
 
 @{
     ViewBag.Title = "Register";
@@ -6,21 +6,30 @@
 
 <h2>Register</h2>
 
-
 <div>
-    @foreach (var item in Model.OrderItems)
-    {
-        <p> Sale ends on @item.EventSelected.StartDate </p>
+    <table>
+        <tr>
+            <th> Count </th>
+            <th> DateCreated </th>
+            <th> EventId </th>
+            <th> EventSelected </th>
+            <th> OrderId </th>
+            <th> OrderNumber </th>
+            <th> RecordId </th>
+            <th> UserId </th>
+        </tr>
+        <tr>
+            <td>
+                @Html.DisplayFor(model => model.EventSelected)
+            </td>
 
-        <table>
-            <tr>
-                <td> @item.EventSelected.Title </td>
-                <td> Number of Tickets  </td>
-            </tr>
-            <tr>
-                <td> FREE </td>
-                <td><@Html.EditorFor(model => item.Count)></td>
-            </tr>
-        </table>
-    }
+        </tr>
+        
+    </table>
 </div>
+
+
+
+
+
+            <td><a href="#">Cancel Order</a></td>

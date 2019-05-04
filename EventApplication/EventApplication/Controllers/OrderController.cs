@@ -26,17 +26,34 @@ namespace EventApplication.Controllers
         }
 
         
-        //Register for event in controller
         // GET: Order/AddOrder
         public ActionResult AddOrder(int id)
         {
             OrderSummary order = OrderSummary.GetOrder(this.HttpContext);
             order.AddOrder(id);
-            //return RedirectToAction("OrderSummary");    --- will need this after authentication implemented
+            //return RedirectToAction("OrderSummary");
             return RedirectToAction("Index");
         }
 
+        //GET Register
+        //need to get count
+        public ActionResult Register(int id)
+        {
+            OrderSummary order = OrderSummary.GetOrder(this.HttpContext);
+            order.AddOrder(id);
 
+           //OrderSummary thesummary = new OrderSummary();
+           //thesummary = OrderSummary.GetOrder(this.HttpContext);
+
+            /*
+             * OrderSummaryViewModel vm = new OrderSummaryViewModel()
+            {
+                OrderItems = order.GetOrderItems()
+            };
+            */
+            //just added "SingleOrderViewModel.cs" still needs info in that class, too
+            return View();
+        }
         // POST: OrderCart/RemoveOrder
         [HttpPost]
         public ActionResult RemoveOrder()
