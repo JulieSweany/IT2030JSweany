@@ -12,6 +12,8 @@ namespace EventApplication.Controllers
     {
         private EventApplicationDB db = new EventApplicationDB();
 
+       
+
         public ActionResult LastMinuteDeals()
         {
             var dealEvents = GetDeals();

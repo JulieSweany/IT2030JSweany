@@ -7,8 +7,7 @@ namespace EventApplication.Models
 {
     public class SingleOrderViewModel
     {
-
-
+        public int numberOfTickets;
 
     }
 }

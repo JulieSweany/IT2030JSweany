@@ -25,6 +25,11 @@ namespace EventApplication.Controllers
             return View(vm);
         }
 
+        public ActionResult Register (int id)
+        {
+            return View();
+        }
+
 
         // GET: Order/AddOrder ---ORIGINAL--Will need one that take in int for Count, too
         public ActionResult AddOrder(int id)

@@ -1,35 +1,22 @@
 ﻿@model EventApplication.Models.Order
 
-@{
-    ViewBag.Title = "Register";
-}
+    @{
+        ViewBag.Title = "Register";
+    }
 
-<h2>Register</h2>
-
-<div>
-    <table>
-        <tr>
-            <th> Count </th>
-            <th> DateCreated </th>
-            <th> EventId </th>
-            <th> EventSelected </th>
-            <th> OrderId </th>
-            <th> OrderNumber </th>
-            <th> RecordId </th>
-            <th> UserId </th>
-        </tr>
-        <tr>
-            <td>
-                @Html.DisplayFor(model => model.EventSelected)
-            </td>
-
-        </tr>
-        
-    </table>
-</div>
+    <h2>Register</h2>
 
 
 
 
+    <input type="text" name="q" placeholder="Event or Event Type" />
 
-            <td><a href="#">Cancel Order</a></td>
+
+
+    <p>
+        @Html.ActionLink("Register", "Register", "Order", new { id = Model.EventId })
+</p>
+
+
+
+
