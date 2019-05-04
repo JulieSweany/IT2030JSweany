@@ -29,7 +29,7 @@ namespace EventApplication.Models
         {
             return db.Orders.Where(o => o.UserId == this.UserId).ToList();
         }
-
+        
         
         
         public void AddOrder(int eventId)
