@@ -17,7 +17,7 @@ namespace EventApplication.Models
                 new EventType { Name = "Music" },
                 new EventType { Name = "Outdoor Festivals" },
                 new EventType { Name = "Fundraisers" },
-                new EventType { Name = "Lectures" },
+                new EventType { Name = "Theater" },
                 new EventType { Name = "Workshops" },
                 new EventType { Name = "Fitness and Health" },
                 new EventType { Name = "Gardening" },
@@ -63,6 +63,127 @@ namespace EventApplication.Models
                     StartDate = DateTime.Parse("05/05/19"), EndDate = DateTime.Parse("05/05/19"),
                     StartTime = DateTime.Parse("21:00:00"), EndTime = DateTime.Parse("23:00:00"), MaxTickets = 100, TicketsAvailable = 100 },
 
+
+
+
+                new Event { EventType = eventTypes.Single(e => e.Name == "Fundraisers"), Title = "Art Fur Animals", Description = "Buy some art and help shelter pets",
+                    Organizer = "Cleveland APL", ContactInfo = "216-555-8935", City = "Cleveland", State = "OH",
+                    StartDate = DateTime.Parse("05/06/19"), EndDate = DateTime.Parse("05/06/19"),
+                    StartTime = DateTime.Parse("21:00:00"), EndTime = DateTime.Parse("23:00:00"), MaxTickets = 100, TicketsAvailable = 100 },
+
+
+                new Event { EventType = eventTypes.Single(e => e.Name == "Theater"), Title = "The Tempest", Description = "Shakespeare classic, directed by Charles Someone",
+                    Organizer = "Great Lakes Theater", ContactInfo = "greatlakestheater.org", City = "Cleveland", State = "OH",
+                    StartDate = DateTime.Parse("05/07/19"), EndDate = DateTime.Parse("05/07/19"),
+                    StartTime = DateTime.Parse("21:00:00"), EndTime = DateTime.Parse("23:00:00"), MaxTickets = 100, TicketsAvailable = 100 },
+
+
+               
+
+
+                new Event { EventType = eventTypes.Single(e => e.Name == "Music"), Title = "Clarinet Concerto in D Minor", Description = "Soloist, Mark Someone, plays this favorite work",
+                    Organizer = "University of Akron", ContactInfo = "330-555-3847", City = "Cleveland", State = "OH",
+                    StartDate = DateTime.Parse("06/11/19"), EndDate = DateTime.Parse("06/11/19"),
+                    StartTime = DateTime.Parse("21:00:00"), EndTime = DateTime.Parse("23:00:00"), MaxTickets = 50, TicketsAvailable = 50 },
+
+                
+
+                new Event { EventType = eventTypes.Single(e => e.Name == "Theater"), Title = "Romeo and Juliet", Description = "Tragedy by Shakespeare",
+                    Organizer = "Great Lakes Theater", ContactInfo = "greatlakestheater.org", City = "Cleveland", State = "OH",
+                    StartDate = DateTime.Parse("06/06/19"), EndDate = DateTime.Parse("06/06/19"),
+                    StartTime = DateTime.Parse("11:00:00"), EndTime = DateTime.Parse("13:00:00"), MaxTickets = 500, TicketsAvailable = 500 },
+
+
+                new Event { EventType = eventTypes.Single(e => e.Name == "Theater"), Title = "And Then There Were None", Description = "Agatha Christie mystery",
+                    Organizer = "Great Lakes Theater", ContactInfo = "greatlakestheater.org", City = "Cleveland", State = "OH",
+                    StartDate = DateTime.Parse("06/07/19"), EndDate = DateTime.Parse("06/07/19"),
+                    StartTime = DateTime.Parse("11:00:00"), EndTime = DateTime.Parse("13:00:00"), MaxTickets = 500, TicketsAvailable = 500 },
+
+                new Event { EventType = eventTypes.Single(e => e.Name == "Theater"), Title = "Into the Woods", Description = "Sondheim Musical",
+                    Organizer = "Great Lakes Theater", ContactInfo = "greatlakestheater.org", City = "Cleveland", State = "OH",
+                    StartDate = DateTime.Parse("06/08/19"), EndDate = DateTime.Parse("06/08/19"),
+                    StartTime = DateTime.Parse("11:00:00"), EndTime = DateTime.Parse("13:00:00"), MaxTickets = 500, TicketsAvailable = 500 },
+
+
+
+                new Event { EventType = eventTypes.Single(e => e.Name == "Music"), Title = "Mr. B Jazz Trio", Description = "First hometown performance after world tour",
+                    Organizer = "Nighttown", ContactInfo = "MrB@jazz.net", City = "Cleveland", State = "OH",
+                    StartDate = DateTime.Parse("07/05/19"), EndDate = DateTime.Parse("07/05/19"),
+                    StartTime = DateTime.Parse("21:00:00"), EndTime = DateTime.Parse("23:00:00"), MaxTickets = 100, TicketsAvailable = 100 },
+
+
+                new Event { EventType = eventTypes.Single(e => e.Name == "Music"), Title = "Revolution Brass Band", Description = "Band performs in Lakewood's Front Porch concert series",
+                    Organizer = "City of Lakewood", ContactInfo = "onelakekwood.com", City = "Lakewood", State = "OH",
+                    StartDate = DateTime.Parse("06/11/19"), EndDate = DateTime.Parse("06/11/19"),
+                    StartTime = DateTime.Parse("18:00:00"), EndTime = DateTime.Parse("19:00:00"), MaxTickets = 100, TicketsAvailable = 100 },
+
+
+
+
+                new Event { EventType = eventTypes.Single(e => e.Name == "Music"), Title = "Cats on Holiday", Description = "Band performs in Lakewood's Front Porch concert series",
+                    Organizer = "City of Lakewood", ContactInfo = "onelakekwood.com", City = "Lakewood", State = "OH",
+                    StartDate = DateTime.Parse("06/18/19"), EndDate = DateTime.Parse("06/18/19"),
+                    StartTime = DateTime.Parse("18:00:00"), EndTime = DateTime.Parse("19:00:00"), MaxTickets = 100, TicketsAvailable = 100 },
+
+
+
+                new Event { EventType = eventTypes.Single(e => e.Name == "Music"), Title = "Flipside", Description = "Band performs in Lakewood's Front Porch concert series",
+                    Organizer = "City of Lakewood", ContactInfo = "onelakekwood.com", City = "Lakewood", State = "OH",
+                    StartDate = DateTime.Parse("06/21/19"), EndDate = DateTime.Parse("06/21/19"),
+                    StartTime = DateTime.Parse("18:00:00"), EndTime = DateTime.Parse("19:00:00"), MaxTickets = 100, TicketsAvailable = 100 },
+
+
+
+                new Event { EventType = eventTypes.Single(e => e.Name == "Music"), Title = "High School Rockoff Winners", Description = "Band performs in Lakewood's Front Porch concert series",
+                    Organizer = "City of Lakewood", ContactInfo = "onelakekwood.com", City = "Lakewood", State = "OH",
+                    StartDate = DateTime.Parse("06/28/19"), EndDate = DateTime.Parse("06/28/19"),
+                    StartTime = DateTime.Parse("18:00:00"), EndTime = DateTime.Parse("19:00:00"), MaxTickets = 100, TicketsAvailable = 100 },
+
+
+
+                new Event { EventType = eventTypes.Single(e => e.Name == "Music"), Title = "Drumplay", Description = "Band performs in Lakewood's Front Porch concert series",
+                    Organizer = "City of Lakewood", ContactInfo = "onelakekwood.com", City = "Lakewood", State = "OH",
+                    StartDate = DateTime.Parse("07/21/19"), EndDate = DateTime.Parse("07/21/19"),
+                    StartTime = DateTime.Parse("18:00:00"), EndTime = DateTime.Parse("19:00:00"), MaxTickets = 100, TicketsAvailable = 100 },
+
+
+
+                new Event { EventType = eventTypes.Single(e => e.Name == "Music"), Title = "Band X", Description = "Band performs in Lakewood's Front Porch concert series",
+                    Organizer = "City of Lakewood", ContactInfo = "onelakekwood.com", City = "Lakewood", State = "OH",
+                    StartDate = DateTime.Parse("07/14/19"), EndDate = DateTime.Parse("07/14/19"),
+                    StartTime = DateTime.Parse("18:00:00"), EndTime = DateTime.Parse("19:00:00"), MaxTickets = 100, TicketsAvailable = 100 },
+
+
+                new Event { EventType = eventTypes.Single(e => e.Name == "Music"), Title = "Jason Smith", Description = "Acclaimed singer/songwriter performs recent works",
+                    Organizer = "Winchester Tavern", ContactInfo = "800-555-2345", City = "Lakewood", State = "OH",
+                    StartDate = DateTime.Parse("06/08/19"), EndDate = DateTime.Parse("06/08/19"),
+                    StartTime = DateTime.Parse("21:00:00"), EndTime = DateTime.Parse("23:00:00"), MaxTickets = 200, TicketsAvailable = 200 },
+
+
+                new Event { EventType = eventTypes.Single(e => e.Name == "Dance"), Title = "Summer Performance", Description = "Cleveland State's dance department performs",
+                    Organizer = "Cleveland State", ContactInfo = "555-7834", City = "Cleveland", State = "OH",
+                    StartDate = DateTime.Parse("07/05/19"), EndDate = DateTime.Parse("07/05/19"),
+                    StartTime = DateTime.Parse("21:00:00"), EndTime = DateTime.Parse("23:00:00"), MaxTickets = 100, TicketsAvailable = 100 },
+
+
+
+                new Event { EventType = eventTypes.Single(e => e.Name == "Theater"), Title = "Macbeth", Description = "Tragedy by Shakespeare",
+                    Organizer = "Great Lakes Theater", ContactInfo = "greatlakestheater.org", City = "Cleveland", State = "OH",
+                    StartDate = DateTime.Parse("07/07/19"), EndDate = DateTime.Parse("07/07/19"),
+                    StartTime = DateTime.Parse("11:00:00"), EndTime = DateTime.Parse("13:00:00"), MaxTickets = 500, TicketsAvailable = 500 },
+
+
+                new Event { EventType = eventTypes.Single(e => e.Name == "Theater"), Title = "The Sound of Music", Description = "Beloved musical",
+                    Organizer = "Great Lakes Theater", ContactInfo = "greatlakestheater.org", City = "Cleveland", State = "OH",
+                    StartDate = DateTime.Parse("06/21/19"), EndDate = DateTime.Parse("06/21/19"),
+                    StartTime = DateTime.Parse("11:00:00"), EndTime = DateTime.Parse("13:00:00"), MaxTickets = 500, TicketsAvailable = 500 },
+
+
+                new Event { EventType = eventTypes.Single(e => e.Name == "Theater"), Title = "And Then There Were None", Description = "Agatha Christie mystery",
+                    Organizer = "Great Lakes Theater", ContactInfo = "greatlakestheater.org", City = "Cleveland", State = "OH",
+                    StartDate = DateTime.Parse("06/22/19"), EndDate = DateTime.Parse("06/22/19"),
+                    StartTime = DateTime.Parse("17:00:00"), EndTime = DateTime.Parse("19:00:00"), MaxTickets = 500, TicketsAvailable = 500 },
+     
 
             }.ForEach(a => context.Events.Add(a));
         }

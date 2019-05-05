@@ -11,6 +11,8 @@ namespace EventApplication.Controllers
     {
         EventApplicationDB db = new EventApplicationDB();
 
+        
+
         // GET: OrderSummaryCart
         public ActionResult Index()
         {
@@ -25,24 +27,41 @@ namespace EventApplication.Controllers
             return View(vm);
         }
 
+        //GET Checkout
+        //receives int id and value of count
+        /*
+        public ActionResult(int id, string count)
+        {
+
+            return View();
+
+            throw new NotImplementedException();
+        }
+        */
+
+
+
+        //Register was moved back to home again
+        /*
         public ActionResult Register (int id)
         {
             OrderSummary order = OrderSummary.GetOrder(this.HttpContext);
             order.AddOrder(id);
 
-            /*
+            
             OrderSummary thesummary = new OrderSummary();
             thesummary = OrderSummary.GetOrder(this.HttpContext);
             OrderSummaryViewModel vm = new OrderSummaryViewModel()
             {
                 OrderItems = thesummary.GetOrderItems()
             };
-            */
+           
 
 
             return View();
         }
-
+     */
+      
 
         // GET: Order/AddOrder ---ORIGINAL--Will need one that take in int for Count, too
         public ActionResult AddOrder(int id)
