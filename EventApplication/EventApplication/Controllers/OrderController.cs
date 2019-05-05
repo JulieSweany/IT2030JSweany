@@ -11,8 +11,6 @@ namespace EventApplication.Controllers
     {
         EventApplicationDB db = new EventApplicationDB();
 
-        
-
         // GET: OrderSummaryCart
         public ActionResult Index()
         {
@@ -29,15 +27,21 @@ namespace EventApplication.Controllers
 
         //GET Checkout
         //receives int id and value of count
-        /*
-        public ActionResult(int id, string count)
+        
+        public ActionResult Checkout(string count)
         {
+            string numberOfTickets = count;
 
-            return View();
+            //string eventIdString = eventId;
+
+            //OrderSummary order = OrderSummary.GetOrder(this.HttpContext);
+            //order.AddOrder(id);
+
+            return  View("OrderSummary");
 
             throw new NotImplementedException();
         }
-        */
+        
 
 
 
