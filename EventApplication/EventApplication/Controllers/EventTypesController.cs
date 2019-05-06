@@ -36,6 +36,7 @@ namespace EventApplication.Controllers
         }
 
         // GET: EventTypes/Create
+        [Authorize]
         public ActionResult Create()
         {
             return View();
