@@ -1,9 +1,13 @@
 ﻿@model EventApplication.Models.OrderSummaryViewModel
 @{
-    ViewBag.Title = "Order Summary (Index)";
+                /**/
+
+                ViewBag.Title = "Ticket Orders";
 }
 
+
 <h2>Ticket Orders</h2>
+
 <div>
     <table class="table">
         <tr>
@@ -26,6 +30,10 @@
             </tr>
         }
     </table>
+
 </div>
 
-@Html.ActionLink("Back to Browse", "Home", "FindAnEvent", new { @class = "btn btn-primary" })
+
+<p class="button">
+    @Html.ActionLink("Back to Browsing Events", "Index", "Home")
+</p>

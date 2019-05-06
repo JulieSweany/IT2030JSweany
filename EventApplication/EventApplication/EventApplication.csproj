@@ -275,7 +275,8 @@
     <Content Include="Views\Home\FindAnEvent.cshtml" />
     <Content Include="Views\Order\Index.cshtml" />
     <Content Include="Views\Home\Register.cshtml" />
-    <Content Include="Views\Order\OrderSummary.cshtml" />
+    <Content Include="Views\Order\Checkout.cshtml" />
+    <Content Include="Views\Order\GoToMyTickets.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

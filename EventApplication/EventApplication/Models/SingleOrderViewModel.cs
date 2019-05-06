@@ -7,8 +7,8 @@ namespace EventApplication.Models
 {
     public class SingleOrderViewModel
     {
-        public Event SingleEvent;
-        public int numberOfTickets;
+        
+        public virtual Order SingleOrder { get; set; }
 
     }
 }

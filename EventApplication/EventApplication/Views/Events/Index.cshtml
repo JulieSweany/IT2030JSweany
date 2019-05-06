@@ -7,7 +7,6 @@
 <h2>Index</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
 </p>
 <table class="table">
     <tr>
@@ -15,9 +14,7 @@
         <th>
             @Html.DisplayNameFor(model => model.Title)
         </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Description)
-        </th>
+        
         <th>
             @Html.DisplayNameFor(model => model.StartDate)
         </th>
@@ -33,9 +30,7 @@
         <th>
             @Html.DisplayNameFor(model => model.Organizer)
         </th>
-        <th>
-            @Html.DisplayNameFor(model => model.ContactInfo)
-        </th>
+        
         <th>
             @Html.DisplayNameFor(model => model.City)
         </th>
@@ -57,9 +52,7 @@
         <td>
             @Html.DisplayFor(modelItem => item.Title)
         </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Description)
-        </td>
+       
         <td>
             @Html.DisplayFor(modelItem => item.StartDate)
         </td>
@@ -75,9 +68,7 @@
         <td>
             @Html.DisplayFor(modelItem => item.Organizer)
         </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.ContactInfo)
-        </td>
+       
         <td>
             @Html.DisplayFor(modelItem => item.City)
         </td>

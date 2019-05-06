@@ -7,9 +7,6 @@
 <h2>Register</h2>
 <p>Sale ends on @Html.DisplayFor(model => model.StartDate)</p>
 
-@using (Html.BeginForm("Checkout", "Order", FormMethod.Get))
-{
-
 
     <div class="row">
         <div class="col-md-6">
@@ -18,14 +15,14 @@
         </div>
         <div class="col-md-6">
             <p>Number of Tickets</p>
-            <input type="text" name="numberOfTickets">
-            <input type="number" name="id" value=@Html.DisplayFor(model => model.EventId)>
+            <input type="number" name="numberOfTickets">
 
         </div>
     </div>
+    <div>
+    @Html.ActionLink("Checkout", "Checkout", "Order", new { id = @Model.EventId }, new { @class = "btn btn-primary"})
+    </div>
 
-    <input type="submit" value="Checkout" class="btn btn-default" />
-}
 
 
 

@@ -8,6 +8,7 @@ namespace EventApplication.Models
 {
     public class EventType
     {
+        [Display(Name = "Event Type")]
         public virtual int EventTypeId { get; set; }
 
         [Display(Name = "Event Type")]

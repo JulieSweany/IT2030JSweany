@@ -24,24 +24,63 @@ namespace EventApplication.Controllers
 
             return View(vm);
         }
-
-        //GET Checkout
-        //receives int id and value of count
-        
-        public ActionResult Checkout(string count)
+        public ActionResult GoToMyTickets()
         {
-            string numberOfTickets = count;
+            //OrderSummary thesummary = new OrderSummary();
+            //thesummary = OrderSummary.GetOrder(this.HttpContext);
 
-            //string eventIdString = eventId;
+            OrderSummary ordersOfUser = OrderSummary.GetOrder(this.HttpContext);
 
-            //OrderSummary order = OrderSummary.GetOrder(this.HttpContext);
-            //order.AddOrder(id);
 
-            return  View("OrderSummary");
+            OrderSummaryViewModel vm = new OrderSummaryViewModel()
+            {
+                OrderItems = ordersOfUser.GetOrderItems()
+            };
 
-            throw new NotImplementedException();
+            return View(vm);
         }
+        //GET Checkout
+        //receives int id only at this point
         
+        public ActionResult Checkout(int id)
+        {
+            
+            OrderSummary order = OrderSummary.GetOrder(this.HttpContext);
+            order.AddOrder(id);
+
+            /*
+            SingleOrderViewModel vm = new SingleOrderViewModel()
+            {
+                SingleOrder = order.GetSingleOrder()
+            };
+            */
+            OrderSummaryViewModel vm = new OrderSummaryViewModel()
+            {
+                OrderItems = order.GetOrderItems()
+            };
+
+            return View(vm);
+        }
+
+        //public ActionResult BackToBrowse()
+        //{
+        //    return RedirectToAction("Events/Index");
+        //}
+    
+        /*
+        public ActionResult OrderReview()
+        {
+            OrderSummary thesummary = new OrderSummary();
+            thesummary = OrderSummary.GetOrder(this.HttpContext);
+
+            OrderSummaryViewModel vm = new OrderSummaryViewModel()
+            {
+                OrderItems = singleOrder.GetSingleOrder()
+            };
+
+            return View(vm);
+        }
+        */
 
 
 
@@ -60,12 +99,10 @@ namespace EventApplication.Controllers
                 OrderItems = thesummary.GetOrderItems()
             };
            
-
-
             return View();
         }
      */
-      
+
 
         // GET: Order/AddOrder ---ORIGINAL--Will need one that take in int for Count, too
         public ActionResult AddOrder(int id)
